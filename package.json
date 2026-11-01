@@ -1,0 +1,12 @@
+{
+  "name": "silent_reverser",
+  "version": "0.2.0",
+  "description": "Reverse-engineering memory-map database and deterministic C++ SDK generator, driven by a harness-agnostic CLI for AI agents and humans.",
+  "type": "module",
+  "bin": { "reverser": "./bin/reverser.mjs" },
+  "files": ["bin/", "src/", "docs/", "README.md", "LICENSE"],
+  "engines": { "node": ">=20" },
+  "scripts": { "test": "node --test" },
+  "keywords": ["reverse-engineering", "sdk", "cpp", "memory-layout", "cli", "agents"],
+  "license": "MIT"
+}

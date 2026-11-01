@@ -1,0 +1,7 @@
+{
+  "removeFields": [{ "struct": "Camera", "fields": ["position", "0x1C"] }],
+  "removeVtableMethods": [{ "struct": "Camera", "indices": [0] }],
+  "removeFunctions": ["0x0056F0D0"],
+  "removeGlobals": ["g_CameraManager"],
+  "structs": [{ "name": "Camera", "comment": "", "vtable": "" }]
+}

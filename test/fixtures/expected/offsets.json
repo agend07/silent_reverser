@@ -1,0 +1,66 @@
+{
+  "target": "Win32 PE Binary",
+  "arch": "x86",
+  "imageBase": "0x00400000",
+  "globals": {
+    "g_LocalPlayer": {
+      "address": "0x01566798",
+      "type": "Player*",
+      "pointerChain": [
+        "+0x38 Mgr*"
+      ]
+    }
+  },
+  "vtables": {
+    "Entity": {
+      "methods": [
+        {
+          "index": 1,
+          "offset": "0x04",
+          "name": "Spawn",
+          "address": "0x00061FF8"
+        },
+        {
+          "index": 2,
+          "offset": "0x08",
+          "name": "Tick",
+          "address": "0x00401500",
+          "signature": "void(__thiscall*)(void*, float)"
+        }
+      ]
+    }
+  },
+  "structs": {
+    "Entity": {
+      "size": "0x0020",
+      "fields": {
+        "health": {
+          "offset": "0x0004",
+          "size": "0x4",
+          "type": "float",
+          "confidence": "confirmed",
+          "comment": "mulss at 0x401010"
+        },
+        "team": {
+          "offset": "0x0008",
+          "size": "0x1",
+          "type": "Team",
+          "confidence": "confirmed"
+        }
+      }
+    },
+    "Player": {
+      "size": "0x002C",
+      "inherits": "Entity",
+      "fields": {
+        "position": {
+          "offset": "0x0020",
+          "size": "0xC",
+          "type": "Vector3",
+          "confidence": "probable"
+        }
+      }
+    }
+  },
+  "functions": {}
+}

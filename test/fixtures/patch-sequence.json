@@ -1,0 +1,18 @@
+[
+  {"enums":[{"name":"Team","underlyingType":"uint8_t","values":[{"name":"None","value":"0"},{"name":"Red","value":"1"}]}]},
+  {"structs":[{"name":"Entity","size":"0x20","vtable":"0x0134A000","comment":"base","fields":[{"offset":"0x4","name":"health","type":"float","comment":"mulss at 0x401010"},{"offset":"0x8","name":"team","type":"Team"}],"vtableMethods":[{"index":0,"name":"Dtor"},{"index":2,"name":"Tick","address":"0x401500","signature":"void(__thiscall*)(void*, float)"}]}]},
+  {"structs":[{"name":"Player","inherits":"Entity","size":"0x60","fields":[{"offset":"0x20","name":"pos","type":"Vector3","confidence":"probable"},{"offset":"0x30","name":"name","type":"char[16]"},{"offset":"0x40","name":"target","type":"Entity*","confidence":"guessed"}]}]},
+  {"structs":[{"name":"Player","fields":[{"offset":"0x20","name":"position","type":"Vector3"}]}]},
+  {"structs":[{"name":"Player","fields":[{"offset":"0x44","name":"target","type":"Player*"}]}]},
+  {"structs":[{"name":"Entity","comment":"","vtable":"","vtableMethods":[{"index":1,"name":"Spawn","address":"401400"}]}]},
+  {"globals":[{"name":"g_Local","address":"0x1566798","type":"Player*","pointerChain":["+0x38 Mgr*"]},{"name":"g_Count","address":"0x1566700","type":"uint32_t"}]},
+  {"globals":[{"name":"g_LocalPlayer","address":"0x01566798","type":"Player*"}]},
+  {"functions":[{"address":"0x401000","name":"Player_Tick","callingConvention":"__thiscall","signature":"void __thiscall Player_Tick(Player* this, float dt)"},{"address":"0x400500","name":"Init","confidence":"probable"}]},
+  {"functions":[{"address":"0x401000","name":"Player_Update"}]},
+  {"enums":[{"name":"Team","comment":"teams","values":[{"name":"Blue","value":"0x2"},{"name":"Red","value":"0x1","comment":"changed"}]}]},
+  {"removeFields":[{"struct":"Player","fields":["name","0x44"]}],"removeVtableMethods":[{"struct":"Entity","indices":[0]}]},
+  {"removeFunctions":["0x400500"],"removeGlobals":["g_Count"]},
+  {"structs":[{"name":"Tmp","fields":[{"offset":"0","name":"a","type":"uint32_t"}]}],"enums":[{"name":"TmpE","values":[]}]},
+  {"removeStructs":["Tmp"],"removeEnums":["TmpE"],"removeFunctions":["Player_Update"]},
+  {"structs":[{"name":"Player","size":""}]}
+]

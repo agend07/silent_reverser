@@ -1,0 +1,84 @@
+{
+  "structs": [
+    {
+      "name": "Entity",
+      "fields": [
+        {
+          "offset": "0x0004",
+          "name": "health",
+          "type": "float",
+          "comment": "mulss at 0x401010",
+          "confidence": "confirmed"
+        },
+        {
+          "offset": "0x0008",
+          "name": "team",
+          "type": "Team",
+          "confidence": "confirmed"
+        }
+      ],
+      "vtableMethods": [
+        {
+          "index": 1,
+          "name": "Spawn",
+          "address": "0x00061FF8"
+        },
+        {
+          "index": 2,
+          "name": "Tick",
+          "address": "0x00401500",
+          "signature": "void(__thiscall*)(void*, float)"
+        }
+      ],
+      "size": "0x0020"
+    },
+    {
+      "name": "Player",
+      "fields": [
+        {
+          "offset": "0x0020",
+          "name": "position",
+          "type": "Vector3",
+          "confidence": "probable"
+        }
+      ],
+      "vtableMethods": [],
+      "inherits": "Entity"
+    }
+  ],
+  "enums": [
+    {
+      "name": "Team",
+      "underlyingType": "uint8_t",
+      "values": [
+        {
+          "name": "None",
+          "value": "0"
+        },
+        {
+          "name": "Red",
+          "value": "0x1",
+          "comment": "changed"
+        },
+        {
+          "name": "Blue",
+          "value": "0x2"
+        }
+      ],
+      "comment": "teams"
+    }
+  ],
+  "globals": [
+    {
+      "name": "g_LocalPlayer",
+      "address": "0x01566798",
+      "type": "Player*",
+      "pointerChain": [
+        "+0x38 Mgr*"
+      ]
+    }
+  ],
+  "functions": [],
+  "schemaVersion": 1,
+  "revision": 16
+}

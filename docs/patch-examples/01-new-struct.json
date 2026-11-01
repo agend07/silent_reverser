@@ -1,0 +1,22 @@
+{
+  "structs": [
+    {
+      "name": "Camera",
+      "size": "0x80",
+      "vtable": "0x0134A000",
+      "comment": "allocated in CameraManager_Create (0x0056E000), operator new(0x80)",
+      "fields": [
+        { "offset": "0x04", "name": "target", "type": "Player*", "confidence": "probable", "comment": "passed to Player_GetEye at 0x0056F120" },
+        { "offset": "0x10", "name": "position", "type": "Vector3", "comment": "movss [esi+10h] at 0x0056F102" },
+        { "offset": "0x1C", "name": "fov", "type": "float", "comment": "mulss xmm0,[esi+1Ch] at 0x0056F14A" }
+      ],
+      "vtableMethods": [
+        { "index": 0, "name": "Dtor" },
+        { "index": 3, "name": "Update", "address": "0x0056F0D0", "signature": "void(__thiscall*)(Camera* self, float dt)" }
+      ]
+    }
+  ],
+  "functions": [
+    { "address": "0x0056F0D0", "name": "Camera_Update", "callingConvention": "__thiscall", "signature": "void __thiscall Camera_Update(Camera* self, float dt)", "decompiledFile": "decompiled/Camera_Update.c" }
+  ]
+}

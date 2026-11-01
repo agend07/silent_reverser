@@ -1,0 +1,14 @@
+{
+  "structs": [
+    {
+      "name": "Camera",
+      "fields": [
+        { "offset": "0x1C", "name": "verticalFov", "type": "float", "comment": "compared against 90.0 in Camera_ClampFov" },
+        { "offset": "0x20", "name": "target", "type": "Player*", "confidence": "confirmed", "comment": "moved: real offset confirmed at 0x0056F130" }
+      ]
+    }
+  ],
+  "globals": [
+    { "name": "g_CameraManager", "address": "0x01566798", "type": "CameraManager*", "signature": "8B 0D ? ? ? ? 85 C9 74 ? 8B 01" }
+  ]
+}
